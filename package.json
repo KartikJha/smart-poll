@@ -6,5 +6,12 @@
   "repository": "https://gamedev90@bitbucket.org/dakpoll/smart-poll.git",
   "author": "Kartik Jha <kartik.n.jha@gmail.com>",
   "license": "UNLICENSED",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "body-parser": "1.18.3",
+    "express": "4.16.3"
+  },
+  "devDependencies": {
+    "node-dev": "3.1.3"
+  }
 }
