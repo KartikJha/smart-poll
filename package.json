@@ -1,0 +1,10 @@
+{
+  "name": "smart-poll",
+  "version": "1.0.0",
+  "description": "ai based polling",
+  "main": "index.js",
+  "repository": "https://gamedev90@bitbucket.org/dakpoll/smart-poll.git",
+  "author": "Kartik Jha <kartik.n.jha@gmail.com>",
+  "license": "UNLICENSED",
+  "private": true
+}
