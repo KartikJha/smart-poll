@@ -3,7 +3,9 @@ const router = express.Router();
 
 router.put('/login', () => {});
 
-router.post('/register', () => {});
+router.post('/register', (req, res) => {
+    
+});
 
 router.get('/logout', () => {});
 

@@ -6,7 +6,7 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const RedisStore = require('connect-redis')(session);
 const User = require('../models/User');
-const UserRoutes = require('../routes/User');
+const rootRoutes = require('./rootRoutes');
 const redis = require('redis');
 const redisClient = redis.createClient();
 
