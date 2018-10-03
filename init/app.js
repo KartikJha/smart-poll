@@ -5,10 +5,11 @@ const bodyParser = require('body-parser');
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const RedisStore = require('connect-redis')(session);
-const User = require('../models/User');
+const User = require('../modules/user/models/User');
 const rootRoutes = require('./rootRoutes');
 const redis = require('redis');
 const redisClient = redis.createClient();
+const UserRoutes = require('../modules/user/userRoutes');
 
 const initializeApp = (redisOptions, sessionSecret) => {
     // add middlewares

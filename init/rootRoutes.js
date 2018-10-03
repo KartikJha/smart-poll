@@ -4,4 +4,4 @@ const router = express.Router();
 // child routes
 const userRoutes = require('../modules/user/userRoutes')
 
-router.use('/user', )
+router.use('/user', userRoutes);
