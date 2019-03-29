@@ -1,6 +1,8 @@
-require('dotenv').config();
-const connectToBackend = require('./init/db');
-const initializeApp = require('./init/app');
+import * as dotenv from 'dotenv';
+import connectToBackend from './init/db';
+import initializeApp from './init/app';
+
+dotenv.config();
 
 connectToBackend(process.env.DB_URL);
 
