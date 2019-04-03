@@ -7,25 +7,25 @@ import * as passportLocal from 'passport-local';
 import * as connectRedis from 'connect-redis';
 import User from '../modules/user/models/User';
 import rootRoutes from './rootRoutes';
-import * as redis from 'redis';
-import UserRoutes from '../modules/user/userRoutes';
+// import * as redis from 'redis';
+import userRoutes from '../modules/user/userRoutes';
 
-const LocalStrategy = passportLocal.Strategy;
-const RedisStore = connectRedis(session);
-const redisClient = redis.createClient();
+// const LocalStrategy = passportLocal.Strategy;
+// const RedisStore = connectRedis(session);
+// const redisClient = redis.createClient();
 
-const initializeApp = (redisOptions: any, sessionSecret: string) => {
+const initializeApp = (redisOptions: object, sessionSecret: string) => {
     // add middlewares
-    redisOptions = Object.assign(redisOptions, { client: redisClient });
+    // redisOptions = Object.assign(redisOptions, { client: redisClient });
     const app = express();
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: false }));
     app.use(cookieParser());
-    app.use(session({
-        store: new RedisStore(redisOptions),
-        secret: sessionSecret,
-        resave: false
-    }));
+    // app.use(session({
+    //     store: new RedisStore(redisOptions),
+    //     secret: sessionSecret,
+    //     resave: false
+    // }));
     app.use(passport.initialize());
     app.use(passport.session());
 
@@ -35,10 +35,11 @@ const initializeApp = (redisOptions: any, sessionSecret: string) => {
     // passport.deserializeUser(User.deserializeUser());
 
     // routes added
-    app.use('/user', UserRoutes);
+    // app.use('/', rootRoutes);
+    app.use('/', rootRoutes);
 
     // app started
-    app.listen(3000, 'localhost', () => {
+    app.listen(4000, 'localhost', () => {
         console.log('App started!');
     });
 

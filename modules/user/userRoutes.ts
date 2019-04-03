@@ -10,7 +10,7 @@ router.post('/register', (req: any, res: any) => {
 router.get('/logout', () => {});
 
 router.get('/', (req: any, res: any) => {
-    res.send('Hello World!');
+    res.send('Hello User!');
 });
 
 router.get('/get_questions', (req: any, res) => {
