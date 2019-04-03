@@ -1,19 +1,19 @@
-const express = require('express');
+import * as express from 'express';
 const router = express.Router();
 
 router.put('/login', () => {});
 
-router.post('/register', (req, res) => {
+router.post('/register', (req: any, res: any) => {
     
 });
 
 router.get('/logout', () => {});
 
-router.get('/', (req, res) => {
-    res.send('Hello World!');
+router.get('/', (req: any, res: any) => {
+    res.send('Hello User!');
 });
 
-router.get('/get_questions', (req, res) => {
+router.get('/get_questions', (req: any, res) => {
     var sampleQuestion = [
         {
             'id': '1',
@@ -69,12 +69,12 @@ router.get('/get_questions', (req, res) => {
     res.send(sampleQuestion);
 })
 
-router.post('/add_question', (req, res) => {
+router.post('/add_question', (req: any, res) => {
     res.send('Sample Question Adding API');
 })
 
-router.post('/select_option', (req, res) => {
+router.post('/select_option', (req: any, res) => {
     res.send('ok');
 })
 
-module.exports = router;
+export default router;

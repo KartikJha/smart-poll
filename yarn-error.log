@@ -1,0 +1,57 @@
+Arguments: 
+  /Users/kartikj/.nvm/versions/node/v6.16.0/bin/node /Users/kartikj/.nvm/versions/node/v6.16.0/bin/yarn
+
+PATH: 
+  /Users/kartikj/.nvm/versions/node/v6.16.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  1.13.0
+
+Node version: 
+  6.16.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/kartikj/Documents/code/smart-poll/package.json: Unexpected token } in JSON at position 696
+      at Object.parse (native)
+      at /Users/kartikj/.nvm/versions/node/v6.16.0/lib/node_modules/yarn/lib/cli.js:1625:59
+      at next (native)
+      at step (/Users/kartikj/.nvm/versions/node/v6.16.0/lib/node_modules/yarn/lib/cli.js:304:30)
+      at /Users/kartikj/.nvm/versions/node/v6.16.0/lib/node_modules/yarn/lib/cli.js:315:13
+
+npm manifest: 
+  {
+    "name": "smart-poll",
+    "version": "1.0.0",
+    "description": "ai based polling",
+    "main": "index.js",
+    "repository": "https://gamedev90@bitbucket.org/dakpoll/smart-poll.git",
+    "author": "Kartik Jha <kartik.n.jha@gmail.com>",
+    "license": "UNLICENSED",
+    "private": true,
+    "dependencies": {
+      "body-parser": "1.18.3",
+      "connect-redis": "^3.3.3",
+      "cookie-parser": "^1.4.3",
+      "dotenv": "^6.0.0",
+      "eslint": "5.6.0",
+      "express": "4.16.3",
+      "express-session": "^1.15.6",
+      "mongoose": "5.2.17",
+      "passport": "^0.4.0",
+      "passport-local": "1.0.0",
+      "passport-local-mongoose": "5.0.1",
+      "redis": "2.8.0"
+    },
+    "devDependencies": {
+      "node-dev": "3.1.3"
+    },
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
